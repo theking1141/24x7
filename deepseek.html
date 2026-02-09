@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-аутсорсинг в Москве | Профессиональные IT-услуги для бизнеса</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #237c33;
+            --primary-light: #6aa232;
+            --accent: #b4cd25;
+            --secondary: #567020;
+            --light-accent: #dfde25;
+            --light-gray: #f9fafc;
+            --medium-gray: #f0f2f5;
+            --dark-gray: #6c757d;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-accent {
+            background-color: var(--accent);
+            color: var(--text-dark);
+        }
+
+        .btn-accent:hover {
+            background-color: var(--light-accent);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--primary-light);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            background-color: var(--light-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-visual {
+            flex: 1;
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .floating-shape {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: var(--accent);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        .shape-1 {
+            top: -20px;
+            right: -20px;
+            width: 150px;
+            height: 150px;
+            background-color: var(--primary-light);
+        }
+
+        .shape-2 {
+            bottom: -30px;
+            left: -30px;
+            width: 120px;
+            height: 120px;
+            background-color: var(--light-accent);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-light), var(--accent));
+            z-index: 2;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(106, 162, 50, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--primary);
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background-color: var(--primary-light);
+            color: white;
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--light-gray);
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.8s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+
+        .stat-text {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Interactive Elements */
+        .interactive-section {
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .interactive-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .calculator {
+            background-color: var(--light-gray);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-top: 40px;
+        }
+
+        .calculator h3 {
+            margin-bottom: 30px;
+        }
+
+        .calculator-input {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .calculator-input label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .calculator-input input,
+        .calculator-input select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+        }
+
+        .calculator-result {
+            background-color: var(--primary-light);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            display: none;
+        }
+
+        .calculator-result.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            background-color: var(--light-gray);
+        }
+
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background-color: var(--white);
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .portfolio-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .portfolio-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .portfolio-item:hover .portfolio-image img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-content {
+            padding: 20px;
+        }
+
+        .portfolio-tag {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: rgba(106, 162, 50, 0.1);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--white);
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 60px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(106, 162, 50, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--primary);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(106, 162, 50, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .footer-logo i {
+            color: var(--accent);
+        }
+
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--accent);
+            color: var(--text-dark);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-container,
+            .about-container,
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .hero-visual {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-links a {
+                padding: 15px 0;
+                font-size: 1.1rem;
+            }
+            
+            .portfolio-filter {
+                gap: 5px;
+            }
+            
+            .filter-btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero {
+                padding-top: 120px;
+                padding-bottom: 60px;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-laptop-code"></i> IT-Partner
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="active">Главная</a>
+                <a href="#services">Услуги</a>
+                <a href="#about">О нас</a>
+                <a href="#portfolio">Кейсы</a>
+                <a href="#calculator">Калькулятор</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content fade-in">
+                <h1>IT-аутсорсинг для бизнеса в Москве</h1>
+                <p>Полный комплекс IT-услуг для вашей компании: от технической поддержки до разработки сложных систем. Более 10 лет создаем технологические решения для бизнеса.</p>
+                
+                <div class="hero-btns">
+                    <a href="#contact" class="btn">Бесплатная консультация</a>
+                    <a href="#services" class="btn btn-accent">Наши услуги</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual fade-in">
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="IT команда">
+                </div>
+                <div class="floating-shape shape-1"></div>
+                <div class="floating-shape shape-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="fade-in">Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>IT-инфраструктура</h3>
+                    <p>Проектирование, настройка и поддержка серверов, сетей и рабочих станций. Обеспечение бесперебойной работы ИТ-систем вашей компании.</p>
+                    <div class="portfolio-tag">от 25 000 ₽/мес</div>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Кибербезопасность</h3>
+                    <p>Защита данных и информационных систем от внутренних и внешних угроз. Аудит безопасности, внедрение систем защиты и мониторинг.</p>
+                    <div class="portfolio-tag">от 15 000 ₽/мес</div>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Разработка ПО</h3>
+                    <p>Создание корпоративного программного обеспечения, веб-приложений и мобильных решений под задачи вашего бизнеса.</p>
+                    <div class="portfolio-tag">от 50 000 ₽/проект</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-container">
+            <div class="about-image fade-in">
+                <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="IT специалисты">
+            </div>
+            
+            <div class="about-content fade-in">
+                <h2>О компании</h2>
+                <p>Мы работаем на рынке IT-аутсорсинга более 10 лет, предоставляя полный спектр услуг по поддержке и развитию IT-инфраструктуры для компаний различных отраслей и масштабов.</p>
+                <p>Наша команда состоит из сертифицированных специалистов с опытом работы в крупных IT-проектах. Мы используем современные технологии и лучшие практики для обеспечения максимальной эффективности и безопасности IT-среды наших клиентов.</p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="clientsCount">0</span>
+                        <span class="stat-text">Довольных клиентов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="projectsCount">0</span>
+                        <span class="stat-text">Успешных проектов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="yearsCount">0</span>
+                        <span class="stat-text">Лет на рынке</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="fade-in">Наши кейсы</h2>
+            
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="infrastructure">IT-инфраструктура</button>
+                <button class="filter-btn" data-filter="security">Кибербезопасность</button>
+                <button class="filter-btn" data-filter="development">Разработка</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item visible" data-category="infrastructure">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Серверная инфраструктура">
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-tag">IT-инфраструктура</span>
+                        <h3>Миграция в облако для ритейл-сети</h3>
+                        <p>Перенос IT-инфраструктуры сети магазинов в облако с повышением отказоустойчивости и снижением затрат на 30%.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item visible" data-category="security">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Кибербезопасность">
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-tag">Кибербезопасность</span>
+                        <h3>Система защиты для финтех компании</h3>
+                        <p>Разработка и внедрение комплексной системы кибербезопасности для компании, работающей с финансовыми данными.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item visible" data-category="development">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Разработка ПО">
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-tag">Разработка</span>
+                        <h3>Корпоративная CRM система</h3>
+                        <p>Разработка и внедрение CRM системы для автоматизации бизнес-процессов производственной компании.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Calculator -->
+    <section class="interactive-section" id="calculator">
+        <div class="container interactive-container">
+            <h2 class="fade-in">Калькулятор стоимости услуг</h2>
+            <p class="fade-in">Рассчитайте примерную стоимость IT-обслуживания вашей компании</p>
+            
+            <div class="calculator fade-in">
+                <h3>Оцените стоимость IT-поддержки</h3>
+                
+                <div class="calculator-input">
+                    <label for="employees">Количество сотрудников:</label>
+                    <input type="range" id="employees" min="5" max="200" value="50" step="5">
+                    <div class="range-value"><span id="employeesValue">50</span> сотрудников</div>
+                </div>
+                
+                <div class="calculator-input">
+                    <label for="services">Уровень услуг:</label>
+                    <select id="services">
+                        <option value="basic">Базовая поддержка</option>
+                        <option value="standard" selected>Стандартная поддержка</option>
+                        <option value="premium">Премиум поддержка</option>
+                        <option value="full">Полный аутсорсинг</option>
+                    </select>
+                </div>
+                
+                <div class="calculator-input">
+                    <label for="period">Срок обслуживания:</label>
+                    <select id="period">
+                        <option value="1">1 месяц</option>
+                        <option value="3">3 месяца</option>
+                        <option value="6">6 месяцев</option>
+                        <option value="12" selected>12 месяцев</option>
+                    </select>
+                </div>
+                
+                <button class="btn" id="calculateBtn">Рассчитать стоимость</button>
+                
+                <div class="calculator-result" id="calculatorResult">
+                    <h3>Примерная стоимость: <span id="costValue">0</span> ₽/мес</h3>
+                    <p>Итоговая стоимость может меняться в зависимости от специфики вашего бизнеса. Для точного расчета свяжитесь с нами.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="fade-in">Контакты</h2>
+            
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <h3>Свяжитесь с нами</h3>
+                    <p>Готовы обсудить ваш проект или ответить на любые вопросы. Оставьте заявку, и мы свяжемся с вами в течение часа.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Адрес</h4>
+                            <p>г. Москва, ул. Тверская, д. 10, БЦ "Тверской", офис 405</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Телефон</h4>
+                            <p>+7 (495) 123-45-67</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@it-partner.ru</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Режим работы</h4>
+                            <p>Пн-Пт: 9:00 - 19:00<br>Сб-Вс: по предварительной записи</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-in">
+                    <h3>Оставить заявку</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Ваше имя" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" placeholder="Ваш телефон" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" placeholder="Ваш email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select>
+                                <option value="" disabled selected>Выберите услугу</option>
+                                <option value="infrastructure">IT-инфраструктура</option>
+                                <option value="security">Кибербезопасность</option>
+                                <option value="development">Разработка ПО</option>
+                                <option value="cloud">Облачные решения</option>
+                                <option value="support">Техподдержка</option>
+                                <option value="consulting">IT-консалтинг</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea placeholder="Сообщение" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-laptop-code"></i> IT-Partner
+                    </a>
+                    <p>Профессиональный IT-аутсорсинг в Москве. Обеспечиваем полную IT-поддержку вашего бизнеса с 2012 года.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">IT-инфраструктура</a></li>
+                        <li><a href="#services">Кибербезопасность</a></li>
+                        <li><a href="#services">Разработка ПО</a></li>
+                        <li><a href="#services">Облачные решения</a></li>
+                        <li><a href="#services">Техподдержка</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Компания</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#portfolio">Кейсы</a></li>
+                        <li><a href="#calculator">Калькулятор</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Москва, ул. Тверская, д. 10</a></li>
+                        <li><a href="#"><i class="fas fa-phone"></i> +7 (495) 123-45-67</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> info@it-partner.ru</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 IT-Partner. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Animated counters
+        const clientsCount = document.getElementById('clientsCount');
+        const projectsCount = document.getElementById('projectsCount');
+        const yearsCount = document.getElementById('yearsCount');
+        
+        function animateCounter(element, target, duration) {
+            let start = 0;
+            const increment = target / (duration / 16); // 60fps
+            
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start);
+                }
+            }, 16);
+        }
+        
+        // Portfolio filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    
+                    if (filter === 'all' || category === filter) {
+                        item.classList.add('visible');
+                    } else {
+                        item.classList.remove('visible');
+                    }
+                });
+            });
+        });
+        
+        // Interactive calculator
+        const employeesSlider = document.getElementById('employees');
+        const employeesValue = document.getElementById('employeesValue');
+        const servicesSelect = document.getElementById('services');
+        const periodSelect = document.getElementById('period');
+        const calculateBtn = document.getElementById('calculateBtn');
+        const calculatorResult = document.getElementById('calculatorResult');
+        const costValue = document.getElementById('costValue');
+        
+        employeesSlider.addEventListener('input', () => {
+            employeesValue.textContent = employeesSlider.value;
+        });
+        
+        calculateBtn.addEventListener('click', () => {
+            const employees = parseInt(employeesSlider.value);
+            const serviceLevel = servicesSelect.value;
+            const period = parseInt(periodSelect.value);
+            
+            // Base cost calculation
+            let baseCost = 0;
+            
+            // Cost per employee based on service level
+            const rates = {
+                basic: 800,
+                standard: 1200,
+                premium: 2000,
+                full: 3000
+            };
+            
+            baseCost = employees * rates[serviceLevel];
+            
+            // Apply discount for longer periods
+            let discount = 0;
+            if (period >= 12) discount = 0.15;
+            else if (period >= 6) discount = 0.1;
+            else if (period >= 3) discount = 0.05;
+            
+            const finalCost = Math.round(baseCost * (1 - discount));
+            
+            // Update result
+            costValue.textContent = finalCost.toLocaleString('ru-RU');
+            calculatorResult.classList.add('active');
+        });
+        
+        // Scroll animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Start counters when about section is visible
+                    if (entry.target.id === 'about' || entry.target.closest('#about')) {
+                        animateCounter(clientsCount, 58, 1000);
+                        animateCounter(projectsCount, 150, 1500);
+                        animateCounter(yearsCount, 10, 800);
+                    }
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+        
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send the form data to a server
+            // For this example, we'll just show a success message
+            
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Заявка отправлена!';
+            submitBtn.style.backgroundColor = '#6aa232';
+            
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.style.backgroundColor = '';
+                contactForm.reset();
+                
+                // Show a confirmation message
+                alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в течение часа.');
+            }, 2000);
+        });
+        
+        // Initialize counters on page load if about section is already visible
+        const aboutSection = document.getElementById('about');
+        if (aboutSection && aboutSection.getBoundingClientRect().top < window.innerHeight) {
+            animateCounter(clientsCount, 58, 1000);
+            animateCounter(projectsCount, 150, 1500);
+            animateCounter(yearsCount, 10, 800);
+        }
+    </script>
+</body>
+</html>
