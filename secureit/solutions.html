@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Боли бизнеса, которые закрывает сервис видеонаблюдения и СКУД | SecurIT Москва</title>
+<meta name="description" content="40+ болей информационных систем безопасности: мёртвый архив, хищения на кассах, сбои шлагбаумов, риски 152-ФЗ, сетевые штормы. Решения на базе Trassir и SLA-обслуживания в Москве.">
+<script>(function(){var t=localStorage.getItem('securit-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t);})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232563eb'/%3E%3Cpath d='M12 5l6 2.2v4.6c0 3.8-2.6 6.1-6 7.2-3.4-1.1-6-3.4-6-7.2V7.2z' fill='none' stroke='white' stroke-width='1.8'/%3E%3Ccircle cx='12' cy='11' r='2' fill='white'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html"><span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><circle cx="12" cy="11" r="2.5"/></svg></span><span>SecurIT<small>инженерный партнёр ДССЛ • Trassir</small></span></a>
+    <nav class="nav" aria-label="Основное меню">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="solutions.html" class="active">Решения</a>
+      <a href="pricing.html">Тарифы и SLA</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Переключить тему"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <a class="btn btn-tg btn-sm" href="https://t.me/SecurIT_Pro" target="_blank" rel="noopener">Telegram</a>
+      <button class="icon-btn burger" data-menu-open aria-label="Открыть меню"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Меню">
+  <div class="mm-head">
+    <span class="logo"><span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><circle cx="12" cy="11" r="2.5"/></svg></span>SecurIT</span>
+    <button class="icon-btn" data-menu-close aria-label="Закрыть меню"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <a class="mm-link" href="index.html">Главная</a>
+  <a class="mm-link" href="services.html">Услуги</a>
+  <a class="mm-link active" href="solutions.html">Решения</a>
+  <a class="mm-link" href="pricing.html">Тарифы и SLA</a>
+  <a class="mm-link" href="contacts.html">Контакты</a>
+  <div class="mm-cta">
+    <a class="btn btn-tg btn-block" href="https://t.me/SecurIT_Pro" target="_blank" rel="noopener">Написать в Telegram</a>
+    <a class="btn btn-outline btn-block" href="tel:+74951234567">+7 (495) 123-45-67</a>
+  </div>
+</div>
+
+<main>
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Диагностика рисков</span>
+    <h1>Боли ваших систем безопасности, которые мы закрываем</h1>
+    <p class="lead">От очевидных («камера не работает») до неочевидных («битые сектора съели архив три месяца назад»). Выберите категорию — покажем боль и наше решение.</p>
+    <div class="chips" style="margin-top:24px">
+      <button class="chip active" data-filter="all">Все боли</button>
+      <button class="chip" data-filter="ops">Операционные</button>
+      <button class="chip" data-filter="fin">Финансовые</button>
+      <button class="chip" data-filter="law">Юридические</button>
+      <button class="chip" data-filter="hr">Кадровые</button>
+      <button class="chip" data-filter="it">ИТ и кибербез</button>
+      <button class="chip" data-filter="psy">Психологические</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:8px">
+  <div class="container">
+    <div class="grid grid-auto">
+
+      <div class="card pain-card reveal" data-cat="ops">
+        <span class="tag-cat">Операционные</span>
+        <div class="pain-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><div><b>Боль</b><p>«Мёртвый архив»: HDD с битыми секторами молча перестал писать 3 месяца назад.</p></div></div>
+        <div class="solve-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg><div><b>Решение</b><p>Ежедневный автотест дисков Trassir ActiveDisk + алерт в Telegram до отказа, а не после инцидента.</p></div></div>
+      </div>
+
+      <div class="card pain-card reveal" data-cat="ops">
+        <span class="tag-cat">Операционные</span>
+        <div class="pain-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><div><b>Боль</b><p>«Мыльные камеры»: ночью ИК-подсветка деградировала, лица и номера нечитаемы.</p></div></div>
+        <div class="solve-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg><div><b>Решение</b><p>Регламент: чистка куполов, фокус, WDR/BLC, ночной тест ИК с фотоотчётом «до/после».</p></div></div>
+      </div>
+
+      <div class="card pain-card reveal" data-cat="ops">
+        <span class="tag-cat">Операционные</span>
+        <div class="pain-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><div><b>Боль</b><p>Шлагбаум встал в час пик: пробка фур, срыв отгрузки, штрафы от ритейлера.</p></div></div>
+        <div class="solve-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg><div><b>Решение</b><p>Плановое ТО механики + SLA-выезд за 2 часа + подменный привод на время ремонта.</p></div></div>
+      </div>
+
+      <div class="card pain-card reveal" data-cat="ops">
+        <span class="tag-cat">Операционные</span>
+        <div class="pain-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><div><b>Боль</b><p>СКУД не интегрирован с ОПС: при пожаре турникеты могут не открыться.</p></div></div>
+        <div class="solve-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg><div><b>Решение</b><p>Настройка и ежеквартальный тест сценариев «Пожар/Тревога» под протокол. Это вопрос жизни.</p></div></div>
+      </div>
+
+      <div class="card pain-card reveal" data-cat="fin">
+        <span class="tag-cat">Финансовые</span>
+        <div class="pain-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><div><b>Боль</b><p>Кассиры: фиктивные возвраты, сторно, «свой» товар по чужой цене.</p></div></div>
+        <div class="solve-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg><div><b>Решение</b><p>Trassir ActivePOS: чек поверх видео, автоматические маркеры подозрительных операций.</p></div></div>
+      </div>
+
+      <div class="card pain-card reveal" data-cat="fin">
+        <span class="tag-cat">Финансовые</span>
+        <div class="pain-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><div><b>Боль</b><p>Склад: пересорт, «левые» отгрузки, недостачи без виновных.</p></div></div>
+        <div class="solve-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg><div><b>Решение</b><p>Видеопривязка к сканам WMS/1С, контроль дебаркадера, LPR на воротах.</p></div></div>
+      </div>
+
+      <div class="card pain-card reveal" data-cat="fin">
+        <span class="tag-cat">Финансовые</span>
+        <div class="pain-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><div><b>Боль</b><p>Аварийные вызовы «по тройной цене» у случайных мастеров по выходным.</p></div></div>
+        <div class="solve-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg><div><b>Решение</b><p>Фиксированная абонентская плата SLA: предсказуемый OPEX вместо аварийного CAPEX.</p></div></div>
+      </div>
+
+      <div class="card pain-card reveal" data-cat="law">
+        <span class="tag-cat">Юридические</span>
+        <div class="pain-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><div><b>Боль</b><p>152-ФЗ: камеры смотрят на улицу/в зоны отдыха, нет табличек и масок приватности.</p></div></div>
+        <div class="solve-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg><div><b>Решение</b><p>Комплаенс-аудит: privacy-маски, таблички, политики хранения, согласие на биометрию.</p></div></div>
+      </div>
+
+      <div class="card pain-card reveal" data-cat="law">
+        <span class="tag-cat">Юридические</span>
+        <div class="pain-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><div><b>Боль</b><p>Трудовой спор или травма: архив перезаписан, доказательств нет, суд проигран.</p></div></div>
+        <div class="solve-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg><div><b>Решение</b><p>Гарантированная глубина архива, RAID/облако, юридически значимый экспорт с хронометажем.</p></div></div>
+      </div>
+
+      <div class="card pain-card reveal" data-cat="hr">
+        <span class="tag-cat">Кадровые</span>
+        <div class="pain-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><div><b>Боль</b><p>Хронофаги и «мёртвые души»: опоздания, «рисование» пропусков коллегой.</p></div></div>
+        <div class="solve-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg><div><b>Решение</b><p>FaceID + СКУД → 1С:ЗУП: объективный табель, анти-tailgating, отчёты для HR.</p></div></div>
+      </div>
+
+      <div class="card pain-card reveal" data-cat="hr">
+        <span class="tag-cat">Кадровые</span>
+        <div class="pain-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><div><b>Боль</b><p>Очереди, хамство, нарушение стандартов сервиса — контроль только «по слухам».</p></div></div>
+        <div class="solve-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg><div><b>Решение</b><p>Детекция очередей, аудио/видео-контроль скриптов, тепловые карты зала.</p></div></div>
+      </div>
+
+      <div class="card pain-card reveal" data-cat="it">
+        <span class="tag-cat">ИТ и кибербез</span>
+        <div class="pain-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><div><b>Боль</b><p>Камеры с дефолтными паролями — вход в ботнет и «чёрный ход» в корпоративную сеть.</p></div></div>
+        <div class="solve-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg><div><b>Решение</b><p>ИБ-аудит: VLAN для CCTV, смена паролей, патчи прошивок, закрытие P2P-портов.</p></div></div>
+      </div>
+
+      <div class="card pain-card reveal" data-cat="it">
+        <span class="tag-cat">ИТ и кибербез</span>
+        <div class="pain-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><div><b>Боль</b><p>Сетевой шторм от неуправляемых PoE-коммутаторов роняет не камеры, а весь офис.</p></div></div>
+        <div class="solve-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg><div><b>Решение</b><p>Проектирование топологии, управляемые коммутаторы, STP, мониторинг сети 24/7.</p></div></div>
+      </div>
+
+      <div class="card pain-card reveal" data-cat="it">
+        <span class="tag-cat">ИТ и кибербез</span>
+        <div class="pain-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><div><b>Боль</b><p>NVR греется в пыльной щитовой без вентиляции — железо умирает вдвое быстрее.</p></div></div>
+        <div class="solve-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg><div><b>Решение</b><p>Обслуживание серверных шкафов: чистка, термоконтроль, ИБП, маркировка трасс.</p></div></div>
+      </div>
+
+      <div class="card pain-card reveal" data-cat="psy">
+        <span class="tag-cat">Психологические</span>
+        <div class="pain-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><div><b>Боль</b><p>«Зоопарк подрядчиков»: все винят друг друга, владелец — вечный арбитр.</p></div></div>
+        <div class="solve-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg><div><b>Решение</b><p>Единое окно: один договор и одна точка ответственности за CCTV, СКУД, сети и серверы.</p></div></div>
+      </div>
+
+      <div class="card pain-card reveal" data-cat="psy">
+        <span class="tag-cat">Психологические</span>
+        <div class="pain-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg><div><b>Боль</b><p>Собственник в разъездах: «чёрный ящик» — что происходит на объектах, неизвестно.</p></div></div>
+        <div class="solve-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg><div><b>Решение</b><p>Trassir Cloud + мобильное приложение: все объекты и тревоги в одном экране, push-алерты.</p></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="section-head center reveal"><span class="eyebrow">Диагностика</span><h2 class="section-title">Как мы находим ваши боли за один визит</h2></div>
+    <div class="steps">
+      <div class="step reveal"><h3>Обход и фотофиксация</h3><p>Каждая камера, каждый замок и каждый коммутатор — в отчёте со статусом и фото.</p></div>
+      <div class="step reveal" style="--d:.08s"><h3>Тест архива и сети</h3><p>Проверка HDD, глубины хранения, синхронизации времени, VLAN и PoE-бюджета.</p></div>
+      <div class="step reveal" style="--d:.16s"><h3>Тест сценариев безопасности</h3><p>«Пожар», «Тревога», аварийное открытие шлагбаума — проверяем на реальном объекте.</p></div>
+      <div class="step reveal" style="--d:.24s"><h3>Отчёт с приоритетами</h3><p>Риски ранжируем по цене бездействия: от «потеря денег» до «угроза жизни».</p></div>
+    </div>
+    <div class="text-center" style="margin-top:30px"><a class="btn btn-primary btn-lg" href="https://t.me/SecurIT_Pro" target="_blank" rel="noopener">Заказать бесплатный аудит</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html"><span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><circle cx="12" cy="11" r="2.5"/></svg></span>SecurIT</a>
+        <p style="color:var(--text-soft);font-size:14.5px;margin-top:14px">Закрываем боли бизнеса инженерными решениями на базе ДССЛ Trassir.</p>
+      </div>
+      <div><h4>Навигация</h4><ul><li><a href="index.html">Главная</a></li><li><a href="services.html">Услуги</a></li><li><a href="pricing.html">Тарифы</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+      <div><h4>Категории болей</h4><ul><li><a href="#" onclick="return false">Операционные</a></li><li><a href="#" onclick="return false">Финансовые</a></li><li><a href="#" onclick="return false">Юридические</a></li><li><a href="#" onclick="return false">Кадровые и ИТ</a></li></ul></div>
+      <div><h4>Контакты</h4><ul><li><a href="tel:+74951234567">+7 (495) 123-45-67</a></li><li><a href="mailto:info@securit.pro">info@securit.pro</a></li><li><a href="https://t.me/SecurIT_Pro" target="_blank" rel="noopener">Telegram: @SecurIT_Pro</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span data-year>2026</span> SecurIT</span><span>Партнёр ДССЛ • Trassir</span></div>
+  </div>
+</footer>
+
+<a class="fab" href="https://t.me/SecurIT_Pro" target="_blank" rel="noopener" aria-label="Быстрый контакт в Telegram">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M23.9 4.03c.36-1.5-.55-2.17-1.53-1.8L2.5 9.9c-1.42.56-1.4 1.35-.24 1.71l5.25 1.64 12.18-7.73c.57-.37 1.1-.17.67.21l-9.86 8.93-.36 5.35c.54 0 .78-.23 1.06-.5l2.55-2.44 5.28 3.87c.97.53 1.66.25 1.92-.9z"/></svg>
+  <span class="fab-tip">Быстрый контакт: Telegram</span>
+</a>
+<button class="to-top" aria-label="Наверх"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+
+<script src="script.js"></script>
+</body>
+</html>
